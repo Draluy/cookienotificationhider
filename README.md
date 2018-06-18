@@ -8,7 +8,7 @@ This addon does not work automatically for every website, as each website has to
 # How to use
 ## Get it from Mozilla's addon repository 
 
-Search for "Cookie Notification Hider" and install it. No dependencies.
+Click here: https://addons.mozilla.org/en-US/firefox/addon/cookies-notification-hider/
 
 ## Build it yourself
 
