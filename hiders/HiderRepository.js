@@ -59,3 +59,22 @@ hiders.set("www.dailymotion.com", () => {
 hiders.set("stackoverflow.com", () => {
     hide(document.querySelector("#js-gdpr-consent-banner"))
 })
+hiders.set("www.nytimes.com", () => {
+    hide(document.querySelector(".shown.expanded"))
+})
+hiders.set("mashable.com", () => {
+    hide(document.querySelector("#_evidon-barrier-wrapper"))
+    hide(document.querySelector("#peek div[data-reactroot]"))
+})
+hiders.set("www.theverge.com", () => {
+    hide(document.querySelector("#privacy-consent"))
+})
+hiders.set("www.bbc.com", () => {
+    hide(document.querySelector("#cookiePrompt"))
+})
+hiders.set("www.thenation.com", () => {
+    hide(document.querySelector("#cookies-policy"))
+})
+hiders.set("www.bloomberg.com", () => {
+    hide(document.querySelector("#paywall-banner"))
+})
