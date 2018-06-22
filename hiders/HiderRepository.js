@@ -1,9 +1,23 @@
+let setIntervalX = function (callback, delay, repetitions) {
+    var x = 0;
+    var intervalID = window.setInterval(function () {
+        callback();
+        if (++x === repetitions) {
+            window.clearInterval(intervalID)
+        }
+    }, delay);
+}
+
+
 let hide = (elt) => {
     elt.style.cssText = 'display:none !important';
 }
 
 let hiders = new Map()
 
+hiders.set("developers.google.com", () => {
+    hide(document.querySelector(".devsite-notification-promo"))
+})
 hiders.set("mashable.com", () => {
     hide(document.querySelector("#_evidon-barrier-wrapper"))
     hide(document.querySelector("#peek div[data-reactroot]"))
@@ -39,11 +53,18 @@ hiders.set("www.bloomberg.com", () => {
 hiders.set("www.cnbc.com", () => {
     hide(document.querySelector("#_evh-ric"))
 })
+hiders.set("www.cnet.com", () => {
+    hide(document.querySelector("#_evidon_banner"))
+})
 hiders.set("www.dailymotion.com", () => {
     hide(document.querySelector("div[class^='Header__gdpr']"))
 })
 hiders.set("www.facebook.com", () => {
     hide(document.querySelector(".fbPageBanner"))
+})
+hiders.set("www.google.com", () => {
+    hide(document.querySelector("#lb"))
+    document.querySelector("html").style.overflow = 'scroll'
 })
 hiders.set("www.google.fr", () => {
     hide(document.querySelector(".fbar"))
@@ -83,4 +104,7 @@ hiders.set("www.twitch.tv", () => {
 })
 hiders.set("www.youtube.com", () => {
     hide(document.querySelector("#ticker"))
+    hide(document.querySelector("iron-overlay-backdrop"))
+    hide(document.querySelector("#consent-bump"))
+    // TODO: make this work: window.document.getElementById("movie_player").playVideo()
 })
