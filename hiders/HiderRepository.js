@@ -50,6 +50,10 @@ hiders.set("www.bing.com", () => {
 hiders.set("www.bloomberg.com", () => {
     hide(document.querySelector("#paywall-banner"))
 })
+hiders.set("www.challenges.fr", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+})
 hiders.set("www.cnbc.com", () => {
     hide(document.querySelector("#_evh-ric"))
 })
