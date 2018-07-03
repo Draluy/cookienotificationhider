@@ -29,6 +29,9 @@ hiders.set("slashdot.org", () => {
 hiders.set("stackoverflow.com", () => {
     hide(document.querySelector("#js-gdpr-consent-banner"))
 })
+hiders.set("theoutline.com", () => {
+    hide(document.querySelector("#CybotCookiebotDialog"))
+})
 hiders.set("twitter.com", () => {
     hide(document.querySelector("#banners"))
 })
@@ -90,6 +93,12 @@ hiders.set("www.pinterest.com", () => {
 })
 hiders.set("www.reddit.com", () => {
     hide(document.querySelector(".hvdZkC"))
+})
+hiders.set("www.techradar.com", () => {
+    hide(document.querySelector("#cmp-container-id"))
+    hide(document.querySelector("div[class^='sp_message_container'"))
+    hide(document.querySelector("div[class^='sp_veil'"))
+    document.querySelector("body").style["overflow-y"] = "scroll"
 })
 hiders.set("www.tf1.fr", () => {
     hide(document.querySelector(".banner_cookies"))
