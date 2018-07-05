@@ -29,6 +29,9 @@ hiders.set("slashdot.org", () => {
 hiders.set("stackoverflow.com", () => {
     hide(document.querySelector("#js-gdpr-consent-banner"))
 })
+hiders.set("streamable.com", () => {
+    hide(document.querySelector("div[class^='app_gdpr']"))
+})
 hiders.set("theoutline.com", () => {
     hide(document.querySelector("#CybotCookiebotDialog"))
 })
@@ -62,6 +65,9 @@ hiders.set("www.cnbc.com", () => {
 })
 hiders.set("www.cnet.com", () => {
     hide(document.querySelector("#_evidon_banner"))
+})
+hiders.set("www.dailymail.co.uk", () => {
+    hide(document.querySelector(".mol-ads-cmp"))
 })
 hiders.set("www.dailymotion.com", () => {
     hide(document.querySelector("div[class^='Header__gdpr']"))
@@ -114,6 +120,14 @@ hiders.set("www.theverge.com", () => {
 })
 hiders.set("www.twitch.tv", () => {
     hide(document.querySelector(".gdpr-consent-banner"))
+})
+hiders.set("www.sciencesetavenir.fr", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+})
+hiders.set("www.whosampled.com", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("www.youtube.com", () => {
     hide(document.querySelector("#ticker"))
