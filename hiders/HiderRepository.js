@@ -56,6 +56,10 @@ hiders.set("www.bing.com", () => {
 hiders.set("www.bloomberg.com", () => {
     hide(document.querySelector("#paywall-banner"))
 })
+hiders.set("www.buzzfeed.com", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+})
 hiders.set("www.challenges.fr", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
@@ -85,11 +89,17 @@ hiders.set("www.google.fr", () => {
 hiders.set("www.instagram.com", () => {
     hide(document.querySelector(".lOPC8"))
 })
+hiders.set("www.leetchi.com", () => {
+    hide(document.querySelector("#AcceptCookiesBanner"))
+})
 hiders.set("www.linkedin.com", () => {
     hide(document.querySelector("#global-alert-queue"))
 })
 hiders.set("www.microsoft.com", () => {
     hide(document.querySelector("#uhfCookieAlert"))
+})
+hiders.set("www.newsweek.com", () => {
+    hide(document.querySelector("#didomi-host"))
 })
 hiders.set("www.nytimes.com", () => {
     hide(document.querySelector(".shown.expanded"))
@@ -117,6 +127,9 @@ hiders.set("www.thenation.com", () => {
 })
 hiders.set("www.theverge.com", () => {
     hide(document.querySelector("#privacy-consent"))
+})
+hiders.set("www.tomshardware.com", () => {
+    hide(document.querySelector(".prism-modal"))
 })
 hiders.set("www.twitch.tv", () => {
     hide(document.querySelector(".gdpr-consent-banner"))
