@@ -22,6 +22,9 @@ hiders.set("mashable.com", () => {
     hide(document.querySelector("#_evidon-barrier-wrapper"))
     hide(document.querySelector("#peek div[data-reactroot]"))
 })
+hiders.set("muli-cycles.de", () => {
+    hide(document.querySelector(".basicLightbox"))
+})
 hiders.set("slashdot.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
@@ -118,6 +121,10 @@ hiders.set("www.techradar.com", () => {
 })
 hiders.set("www.tf1.fr", () => {
     hide(document.querySelector(".banner_cookies"))
+})
+hiders.set("www.theatlantic.com", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("www.theguardian.com", () => {
     hide(document.querySelector(".site-message--first-pv-consent"))
