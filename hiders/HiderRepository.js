@@ -15,6 +15,9 @@ let hide = (elt) => {
 
 let hiders = new Map()
 
+hiders.set("commande.dominos.fr", () => {
+    hide(document.querySelector(".optanon-alert-box-wrapper"))
+})
 hiders.set("developers.google.com", () => {
     hide(document.querySelector(".devsite-notification-promo"))
 })
@@ -50,6 +53,11 @@ hiders.set("uk.reuters.com", () => {
 hiders.set("www.6play.fr", () => {
     hide(document.querySelector(".banner--gdpr"))
 })
+hiders.set("www.atlasobscura.com", () => {
+    hide(document.querySelector("#cookie-consent-modal"))
+    hide(document.querySelector(".modal-backdrop"))
+    document.querySelector("body").classList.remove("modal-open")
+})
 hiders.set("www.bbc.com", () => {
     hide(document.querySelector("#cookiePrompt"))
 })
@@ -64,6 +72,10 @@ hiders.set("www.buzzfeed.com", () => {
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("www.challenges.fr", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+})
+hiders.set("www.citylab.com", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
@@ -107,6 +119,9 @@ hiders.set("www.newsweek.com", () => {
 hiders.set("www.nytimes.com", () => {
     hide(document.querySelector(".shown.expanded"))
 })
+hiders.set("www.pcgamer.com", () => {
+    hide(document.querySelector("#cmp-container-id"))
+})
 hiders.set("www.pinterest.com", () => {
     hide(document.querySelector(".outerCookieBar"))
 })
@@ -118,6 +133,11 @@ hiders.set("www.techradar.com", () => {
     hide(document.querySelector("div[class^='sp_message_container'"))
     hide(document.querySelector("div[class^='sp_veil'"))
     document.querySelector("body").style["overflow-y"] = "scroll"
+})
+hiders.set("www.themarysue.com", () => {
+    hide(document.querySelector("#CybotCookiebotDialogBodyUnderlay"))
+    hide(document.querySelector("#CybotCookiebotDialog"))
+    document.querySelector("body").style.overflow = "scroll"
 })
 hiders.set("www.tf1.fr", () => {
     hide(document.querySelector(".banner_cookies"))
@@ -144,6 +164,9 @@ hiders.set("www.twitch.tv", () => {
 hiders.set("www.sciencesetavenir.fr", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+})
+hiders.set("www.vox.com", () => {
+    hide(document.querySelector("#privacy-consent"))
 })
 hiders.set("www.whosampled.com", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
