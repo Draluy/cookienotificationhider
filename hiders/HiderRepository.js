@@ -41,6 +41,9 @@ hiders.set("streamable.com", () => {
 hiders.set("theoutline.com", () => {
     hide(document.querySelector("#CybotCookiebotDialog"))
 })
+hiders.set("towardsdatascience.com", () => {
+    hide(document.querySelector(".butterBar"))
+})
 hiders.set("twitter.com", () => {
     hide(document.querySelector("#banners"))
 })
@@ -101,11 +104,18 @@ hiders.set("www.google.com", () => {
 hiders.set("www.google.fr", () => {
     hide(document.querySelector(".fbar"))
 })
+hiders.set("www.infoconcert.com", () => {
+    hide(document.querySelector("#notification-cookies"))
+})
 hiders.set("www.instagram.com", () => {
     hide(document.querySelector(".lOPC8"))
 })
 hiders.set("www.leetchi.com", () => {
     hide(document.querySelector("#AcceptCookiesBanner"))
+})
+hiders.set("www.lesnumeriques.com", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("www.linkedin.com", () => {
     hide(document.querySelector("#global-alert-queue"))
@@ -124,6 +134,9 @@ hiders.set("www.pcgamer.com", () => {
 })
 hiders.set("www.pinterest.com", () => {
     hide(document.querySelector(".outerCookieBar"))
+})
+hiders.set("www.polygon.com", () => {
+    hide(document.querySelector("#privacy-consent"))
 })
 hiders.set("www.reddit.com", () => {
     hide(document.querySelector(".hvdZkC"))
