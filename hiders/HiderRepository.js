@@ -138,8 +138,17 @@ hiders.set("www.pinterest.com", () => {
 hiders.set("www.polygon.com", () => {
     hide(document.querySelector("#privacy-consent"))
 })
+hiders.set("www.quechoisir.org", () => {
+    hide(document.querySelector("#bannerCnil"))
+})
 hiders.set("www.reddit.com", () => {
     hide(document.querySelector(".hvdZkC"))
+})
+hiders.set("www.siemens-home.bsh-group.com", () => {
+    hide(document.querySelector(".o-cookielaw"))
+})
+hiders.set("www.sudinfo.be", () => {
+    hide(document.querySelector("#cookiesdirective"))
 })
 hiders.set("www.techradar.com", () => {
     hide(document.querySelector("#cmp-container-id"))
@@ -173,6 +182,9 @@ hiders.set("www.tomshardware.com", () => {
 })
 hiders.set("www.twitch.tv", () => {
     hide(document.querySelector(".gdpr-consent-banner"))
+})
+hiders.set("www.rockpapershotgun.com", () => {
+    hide(document.querySelector(".cookie-gdpr"))
 })
 hiders.set("www.sciencesetavenir.fr", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
