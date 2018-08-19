@@ -25,6 +25,10 @@ hiders.set("mashable.com", () => {
     hide(document.querySelector("#_evidon-barrier-wrapper"))
     hide(document.querySelector("#peek div[data-reactroot]"))
 })
+hiders.set("medium.com", () => {
+    hide(document.querySelector(".overlay"))
+    document.querySelector("body").style.overflow = 'scroll'
+})
 hiders.set("muli-cycles.de", () => {
     hide(document.querySelector(".basicLightbox"))
 })
