@@ -32,6 +32,9 @@ hiders.set("medium.com", () => {
 hiders.set("muli-cycles.de", () => {
     hide(document.querySelector(".basicLightbox"))
 })
+hiders.set("newrepublic.com", () => {
+    hide(document.querySelector(".site-popup.consent"))
+})
 hiders.set("slashdot.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
@@ -65,6 +68,10 @@ hiders.set("www.atlasobscura.com", () => {
     hide(document.querySelector(".modal-backdrop"))
     document.querySelector("body").classList.remove("modal-open")
 })
+
+hiders.set("www.backmarket.fr", () => {
+    hide(document.querySelector(".banner.paper"))
+})
 hiders.set("www.bbc.com", () => {
     hide(document.querySelector("#cookiePrompt"))
 })
@@ -97,6 +104,9 @@ hiders.set("www.dailymail.co.uk", () => {
 })
 hiders.set("www.dailymotion.com", () => {
     hide(document.querySelector("div[class^='Header__gdpr']"))
+})
+hiders.set("www.esquire.com", () => {
+    hide(document.querySelector("#_evidon-banner"))
 })
 hiders.set("www.facebook.com", () => {
     hide(document.querySelector(".fbPageBanner"))
@@ -146,7 +156,7 @@ hiders.set("www.quechoisir.org", () => {
     hide(document.querySelector("#bannerCnil"))
 })
 hiders.set("www.reddit.com", () => {
-    hide(document.querySelector(".hvdZkC"))
+    //hide(document.querySelector("#SHORTCUT_FOCUSABLE_DIV > div:nth-of-type(2):has(form)"))
 })
 hiders.set("www.siemens-home.bsh-group.com", () => {
     hide(document.querySelector(".o-cookielaw"))
