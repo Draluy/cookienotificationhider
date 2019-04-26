@@ -13,6 +13,10 @@ let hide = (elt) => {
     elt.style.cssText = 'display:none !important';
 }
 
+let hideAll = (elts) => {
+    elts.forEach((elt => hide(elt)));
+}
+
 let hiders = new Map()
 
 hiders.set("commande.dominos.fr", () => {
@@ -20,6 +24,10 @@ hiders.set("commande.dominos.fr", () => {
 })
 hiders.set("developers.google.com", () => {
     hide(document.querySelector(".devsite-notification-promo"))
+})
+hiders.set("donnons.org", () => {
+    hide(document.querySelector(".qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("mashable.com", () => {
     hide(document.querySelector("#_evidon-barrier-wrapper"))
@@ -34,6 +42,16 @@ hiders.set("muli-cycles.de", () => {
 })
 hiders.set("newrepublic.com", () => {
     hide(document.querySelector(".site-popup.consent"))
+})
+hiders.set("motherboard.vice.com", () => {
+    hideAll(document.querySelectorAll("div#root ~ div"))
+    document.querySelector("body").style.overflowY = "scroll"
+})
+hiders.set("mydhl.express.dhl", () => {
+    hide(document.querySelector(".cookies-policy"))
+})
+hiders.set("nationalpost.com", () => {
+    hide(document.querySelector(".fc-dialog-container"))
 })
 hiders.set("slashdot.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
@@ -85,6 +103,9 @@ hiders.set("www.buzzfeed.com", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
+hiders.set("www.cbsnews.com", () => {
+    hide(document.querySelector("#_evidon_banner"))
+})
 hiders.set("www.challenges.fr", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
@@ -127,6 +148,9 @@ hiders.set("www.instagram.com", () => {
 hiders.set("www.leetchi.com", () => {
     hide(document.querySelector("#AcceptCookiesBanner"))
 })
+hiders.set("www.leroymerlin.fr", () => {
+    hide(document.querySelector("#privacy_bandeau"))
+})
 hiders.set("www.lesnumeriques.com", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
@@ -158,6 +182,9 @@ hiders.set("www.quechoisir.org", () => {
 hiders.set("www.reddit.com", () => {
     //hide(document.querySelector("#SHORTCUT_FOCUSABLE_DIV > div:nth-of-type(2):has(form)"))
 })
+hiders.set("www.reuters.com", () => {
+    hide(document.querySelector("#_evidon_banner"))
+})
 hiders.set("www.siemens-home.bsh-group.com", () => {
     hide(document.querySelector(".o-cookielaw"))
 })
@@ -181,6 +208,10 @@ hiders.set("www.tf1.fr", () => {
 hiders.set("www.theatlantic.com", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+})
+hiders.set("www.thedailybeast.com", () => {
+    hide(document.querySelector("#optanon-popup-bg"))
+    hide(document.querySelector(".optanon-alert-box-wrapper"))
 })
 hiders.set("www.theguardian.com", () => {
     hide(document.querySelector(".site-message--first-pv-consent"))
