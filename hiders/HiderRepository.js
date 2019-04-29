@@ -132,6 +132,16 @@ hiders.set("www.esquire.com", () => {
 hiders.set("www.facebook.com", () => {
     hide(document.querySelector(".fbPageBanner"))
 })
+hiders.set("www.francetvinfo.fr", () => {
+	hide(document.querySelector("#cookie-cnil-box"))
+	hide(document.querySelector("#newsletterSubContainer"))
+})
+hiders.set("www.gamelove.com", () => {
+	hide(document.querySelector("#sliding-popup"))
+})
+hiders.set("www.gibert.com", () => {
+	hide(document.querySelector("#notice-cookie-block"))
+})
 hiders.set("www.google.com", () => {
     hide(document.querySelector("#lb"))
     document.querySelector("html").style.overflow = 'scroll'
@@ -147,6 +157,9 @@ hiders.set("www.instagram.com", () => {
 })
 hiders.set("www.leetchi.com", () => {
     hide(document.querySelector("#AcceptCookiesBanner"))
+})
+hiders.set("www.lemonde.fr", () => {
+	hide(document.querySelector("#cookie-banner"))
 })
 hiders.set("www.leroymerlin.fr", () => {
     hide(document.querySelector("#privacy_bandeau"))
