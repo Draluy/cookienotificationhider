@@ -205,7 +205,15 @@ hiders.set("www.quechoisir.org", () => {
     hide(document.querySelector("#bannerCnil"))
 })
 hiders.set("www.reddit.com", () => {
-    //hide(document.querySelector("#SHORTCUT_FOCUSABLE_DIV > div:nth-of-type(2):has(form)"))
+    let parentDivs = document.querySelectorAll("#SHORTCUT_FOCUSABLE_DIV > div");
+    for (const [i, div] of parentDivs.entries()){
+        if(div.firstChild && div.firstChild.firstChild.tagName.toUpperCase() == "FORM"){
+            let form = div.firstChild.firstChild
+            if (form.innerHTML.indexOf("Cookies") !== -1) {
+                hide(div)
+            }
+        }
+    }
 })
 hiders.set("www.reuters.com", () => {
     hide(document.querySelector("#_evidon_banner"))
