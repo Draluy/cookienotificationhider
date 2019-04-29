@@ -56,6 +56,9 @@ hiders.set("mydhl.express.dhl", () => {
 hiders.set("nationalpost.com", () => {
     hide(document.querySelector(".fc-dialog-container"))
 })
+hiders.set("phys.org", () => {
+    hide(document.querySelector("#js-popup-cookies"))
+})
 hiders.set("slashdot.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
@@ -98,6 +101,10 @@ hiders.set("www.bbc.com", () => {
 })
 hiders.set("www.bing.com", () => {
     hide(document.querySelector("#thp_notf_div"))
+})
+hiders.set("www.biography.com", () => {
+    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
+    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("www.bloomberg.com", () => {
     hide(document.querySelector("#paywall-banner"))
