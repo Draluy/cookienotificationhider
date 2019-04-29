@@ -29,6 +29,9 @@ hiders.set("donnons.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
+hiders.set("krita.org", () => {
+    hide(document.querySelector("#cookies-message"))
+})
 hiders.set("mashable.com", () => {
     hide(document.querySelector("#_evidon-barrier-wrapper"))
     hide(document.querySelector("#peek div[data-reactroot]"))
@@ -132,6 +135,15 @@ hiders.set("www.esquire.com", () => {
 hiders.set("www.facebook.com", () => {
     hide(document.querySelector(".fbPageBanner"))
 })
+hiders.set("www.francetvinfo.fr", () => {
+    hide(document.querySelector("#cookie-cnil-box"))
+})
+hiders.set("www.gamelove.com", () => {
+    hide(document.querySelector("#sliding-popup"))
+})
+hiders.set("www.gibert.com", () => {
+    hide(document.querySelector("#notice-cookie-block"))
+})
 hiders.set("www.google.com", () => {
     hide(document.querySelector("#lb"))
     document.querySelector("html").style.overflow = 'scroll'
@@ -145,8 +157,14 @@ hiders.set("www.infoconcert.com", () => {
 hiders.set("www.instagram.com", () => {
     hide(document.querySelector(".lOPC8"))
 })
+hiders.set("www.jamendo.com", () => {
+    hide(document.querySelector("li.is-cookie-banner"))
+})
 hiders.set("www.leetchi.com", () => {
     hide(document.querySelector("#AcceptCookiesBanner"))
+})
+hiders.set("www.lemonde.fr", () => {
+    hide(document.querySelector("#cookie-banner"))
 })
 hiders.set("www.leroymerlin.fr", () => {
     hide(document.querySelector("#privacy_bandeau"))
