@@ -137,7 +137,6 @@ hiders.set("www.facebook.com", () => {
 })
 hiders.set("www.francetvinfo.fr", () => {
     hide(document.querySelector("#cookie-cnil-box"))
-    hide(document.querySelector("#newsletterSubContainer"))
 })
 hiders.set("www.gamelove.com", () => {
     hide(document.querySelector("#sliding-popup"))
