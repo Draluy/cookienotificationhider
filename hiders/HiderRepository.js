@@ -156,7 +156,7 @@ hiders.set("www.esquire.com", () => {
     hide(document.querySelector("#_evidon-banner"))
 })
 hiders.set("www.eurogamer.net", () => {
-    ".bottom.cookie-bar.cookie-gdpr"
+    hide(document.querySelector(".bottom.cookie-bar.cookie-gdpr"))
 })
 hiders.set("www.facebook.com", () => {
     hide(document.querySelector(".fbPageBanner"))
