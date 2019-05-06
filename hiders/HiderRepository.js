@@ -24,14 +24,9 @@ let hideQuantcast = () => {
 
 let hiders = new Map()
 
-hiders.set("audi.fr", () => {
-    hide(document.querySelector(".nm-cookiepolicy"))
-})
+
 hiders.set("bibliotheques.paris.fr", () => {
     hide(document.querySelector("#cnil_banner_container"))
-})
-hiders.set("bmw.fr", () => {
-    hide(document.querySelector(".ds2-cookie-disclaimer"))
 })
 hiders.set("commande.dominos.fr", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
@@ -65,10 +60,6 @@ hiders.set("muli-cycles.de", () => {
 })
 hiders.set("newrepublic.com", () => {
     hide(document.querySelector(".site-popup.consent"))
-})
-hiders.set("mercedes-benz.fr", () => {
-    hide(document.querySelector("#cp-overlay"))
-    hide(document.querySelector("#cp-dialog"))
 })
 hiders.set("motherboard.vice.com", () => {
     hideAll(document.querySelectorAll("div#root ~ div"))
@@ -119,6 +110,9 @@ hiders.set("www.atlasobscura.com", () => {
     hide(document.querySelector(".modal-backdrop"))
     document.querySelector("body").classList.remove("modal-open")
 })
+hiders.set("www.audi.fr", () => {
+    hide(document.querySelector(".nm-cookiepolicy"))
+})
 hiders.set("www.backmarket.fr", () => {
     hide(document.querySelector(".banner.paper"))
 })
@@ -132,8 +126,14 @@ hiders.set("www.biography.com", () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
+hiders.set("www.blackwake.com", () => {
+    hide(document.querySelector("#kb-container"))
+})
 hiders.set("www.bloomberg.com", () => {
     hide(document.querySelector("#paywall-banner"))
+})
+hiders.set("www.bmw.fr", () => {
+    hide(document.querySelector(".ds2-cookie-disclaimer"))
 })
 hiders.set("www.buzzfeed.com", () => {
     hideQuantcast()
@@ -213,6 +213,10 @@ hiders.set("www.linkedin.com", () => {
 })
 hiders.set("www.lycamobile.fr", () => {
     hide(document.querySelector(".cookie-notice-container"))
+})
+hiders.set("www.mercedes-benz.fr", () => {
+    hide(document.querySelector("#cp-overlay"))
+    hide(document.querySelector("#cp-dialog"))
 })
 hiders.set("www.microsoft.com", () => {
     hide(document.querySelector("#uhfCookieAlert"))
