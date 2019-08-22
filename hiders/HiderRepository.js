@@ -208,6 +208,9 @@ hiders.set("izismile.com", () => {
 hiders.set("www.jamendo.com", () => {
     hide(document.querySelector("li.is-cookie-banner"))
 })
+hiders.set("www.jetbrains.com", () => {
+    hide(document.querySelector(".cookies-banner__body"))
+})
 hiders.set("www.leetchi.com", () => {
     hide(document.querySelector("#AcceptCookiesBanner"))
 })
