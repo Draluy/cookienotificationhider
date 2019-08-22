@@ -1,14 +1,3 @@
-let setIntervalX = function (callback, delay, repetitions) {
-    var x = 0;
-    var intervalID = window.setInterval(function () {
-        callback();
-        if (++x === repetitions) {
-            window.clearInterval(intervalID)
-        }
-    }, delay);
-}
-
-
 let hide = (elt) => {
     elt.style.cssText = 'display:none !important';
 }
@@ -22,11 +11,25 @@ let hideQuantcast = () => {
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 }
 
-let hiders = new Map()
+hiders.containsHostname = (hostname) => {
+    hideCookieMessage = null
+    for (let [matchingStr, value] of hiders) {
+        matchingStr = matchingStr.replace("*", "(?:.*?)")
+        matchingStr = matchingStr.replace(/\./g, "\\\.")
+        if (RegExp(matchingStr).test(hostname)){
+            hideCookieMessage = value
+            break
+        }
+    }
 
+    return hideCookieMessage !== null
+}
 
 hiders.set("bibliotheques.paris.fr", () => {
     hide(document.querySelector("#cnil_banner_container"))
+})
+hiders.set("*.blogspot.com", () => {
+    hide(document.querySelector("#cookieChoiceInfo"))
 })
 hiders.set("commande.dominos.fr", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
@@ -119,6 +122,9 @@ hiders.set("www.backmarket.fr", () => {
 hiders.set("www.bbc.com", () => {
     hide(document.querySelector("#cookiePrompt"))
 })
+hiders.set("www.bicycling.com", () => {
+    hide(document.querySelector("#_evidon-barrier-wrapper"))
+})
 hiders.set("www.bing.com", () => {
     hide(document.querySelector("#thp_notf_div"))
 })
@@ -157,7 +163,10 @@ hiders.set("www.dailymail.co.uk", () => {
     hide(document.querySelector(".mol-ads-cmp"))
 })
 hiders.set("www.dailymotion.com", () => {
-    hide(document.querySelector("div[class^='Header__gdpr']"))
+    hide(document.querySelector("div[class^='CookieGdpr__cookie']"))
+})
+hiders.set("www.dealabs.com", () => {
+    hide(document.querySelector(".softMessages-list"))
 })
 hiders.set("www.esquire.com", () => {
     hide(document.querySelector("#_evidon-banner"))
@@ -193,6 +202,9 @@ hiders.set("www.infoconcert.com", () => {
 hiders.set("www.instagram.com", () => {
     hide(document.querySelector(".lOPC8"))
 })
+hiders.set("izismile.com", () => {
+    hideQuantcast()
+})
 hiders.set("www.jamendo.com", () => {
     hide(document.querySelector("li.is-cookie-banner"))
 })
@@ -223,6 +235,7 @@ hiders.set("www.microsoft.com", () => {
 })
 hiders.set("www.newsweek.com", () => {
     hide(document.querySelector("#didomi-host"))
+    document.querySelector("body").classList.remove("didomi-popup-open")
 })
 hiders.set("www.nissan.fr", () => {
     hide(document.querySelector(".cookies-container"))
@@ -247,8 +260,8 @@ hiders.set("www.quechoisir.org", () => {
 })
 hiders.set("www.reddit.com", () => {
     let parentDivs = document.querySelectorAll("#SHORTCUT_FOCUSABLE_DIV > div");
-    for (const [i, div] of parentDivs.entries()){
-        if(div.firstChild && div.firstChild.firstChild.tagName.toUpperCase() == "FORM"){
+    for (const [i, div] of parentDivs.entries()) {
+        if (div.firstChild && div.firstChild.firstChild.tagName.toUpperCase() == "FORM") {
             let form = div.firstChild.firstChild
             if (form.innerHTML.indexOf("Cookies") !== -1) {
                 hide(div)
@@ -264,6 +277,9 @@ hiders.set("www.siemens-home.bsh-group.com", () => {
 })
 hiders.set("www.sudinfo.be", () => {
     hide(document.querySelector("#cookiesdirective"))
+})
+hiders.set("www.tablaroliste.com", () => {
+    hide(document.querySelector(".cookie-dialog"))
 })
 hiders.set("www.techradar.com", () => {
     hide(document.querySelector("#cmp-container-id"))

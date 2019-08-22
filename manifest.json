@@ -2,20 +2,22 @@
   "manifest_version": 2,
   "name": "Cookies Notification Hider",
   "version": "1.0.15",
-
   "description": "Hides the pesky messages that ask you whether you'd like to accept cookies or not, without accepting them.",
-
   "icons": {
     "48": "icons/icon48.png"
   },
-
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["./hiders/HiderRepository.js", "./CookiesNotificationHider.js"]
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "./hiders/Store.js",
+        "./hiders/HiderRepository.js",
+        "./CookiesNotificationHider.js"
+      ]
     }
   ],
-
   "applications": {
     "gecko": {
       "id": "cookienotificationhider@raluy.fr"
