@@ -31,6 +31,9 @@ hiders.set("bibliotheques.paris.fr", () => {
 hiders.set("*.blogspot.com", () => {
     hide(document.querySelector("#cookieChoiceInfo"))
 })
+hiders.set("blogs.scientificamerican.com", () => {
+    hide(document.querySelector(".optanon-alert-box-wrapper"))
+})
 hiders.set("commande.dominos.fr", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
 })
@@ -41,6 +44,9 @@ hiders.set("donnons.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
+hiders.set("dd-wrt.com", () => {
+    hide(document.querySelector(".cookie-notice-container"))
+})
 hiders.set("fr.mappy.com", () => {
     hide(document.querySelector("#IndexView-first-visit"))
 })
@@ -49,6 +55,10 @@ hiders.set("freesound.org", () => {
 })
 hiders.set("krita.org", () => {
     hide(document.querySelector("#cookies-message"))
+})
+hiders.set("larousse.fr", () => {
+    hide(document.querySelector(".optanon-alert-box-wrapper"))
+    hide(document.querySelector("#optanon"))
 })
 hiders.set("mashable.com", () => {
     hide(document.querySelector("#_evidon-barrier-wrapper"))
@@ -99,11 +109,20 @@ hiders.set("towardsdatascience.com", () => {
 hiders.set("twitter.com", () => {
     hide(document.querySelector("#banners"))
 })
+hiders.set("uk.reuters.com", () => {
+    hide(document.querySelector("#_evidon_banner"))
+})
 hiders.set("wordpress.com", () => {
     hide(document.querySelector(".custom-cookie-banner"))
 })
+hiders.set("vimeo.com", () => {
+    hide(document.querySelector(".gdpr_banner"))
+})
 hiders.set("uk.reuters.com", () => {
     hide(document.querySelector("#_evidon_banner"))
+})
+hiders.set("wiki.dd-wrt.com", () => {
+    hide(document.querySelector(".cookieinfo"))
 })
 hiders.set("www.6play.fr", () => {
     hide(document.querySelector(".banner--gdpr"))
@@ -168,6 +187,9 @@ hiders.set("www.dailymotion.com", () => {
 hiders.set("www.dealabs.com", () => {
     hide(document.querySelector(".softMessages-list"))
 })
+hiders.set("www.dejbox.fr", () => {
+    hide(document.querySelector(".cookie_banner"))
+})
 hiders.set("www.esquire.com", () => {
     hide(document.querySelector("#_evidon-banner"))
 })
@@ -176,6 +198,9 @@ hiders.set("www.eurogamer.net", () => {
 })
 hiders.set("www.facebook.com", () => {
     hide(document.querySelector(".fbPageBanner"))
+})
+hiders.set("www.foozine.com", () => {
+    hideQuantcast()
 })
 hiders.set("www.francetvinfo.fr", () => {
     hide(document.querySelector("#cookie-cnil-box"))
@@ -272,8 +297,14 @@ hiders.set("www.reddit.com", () => {
         }
     }
 })
+hiders.set("www.rollingstone.com", () => {
+    hideQuantcast()
+})
 hiders.set("www.reuters.com", () => {
     hide(document.querySelector("#_evidon_banner"))
+})
+hiders.set("www.r-m.de", () => {
+    hide(document.querySelector(".privacy-container"))
 })
 hiders.set("www.siemens-home.bsh-group.com", () => {
     hide(document.querySelector(".o-cookielaw"))
