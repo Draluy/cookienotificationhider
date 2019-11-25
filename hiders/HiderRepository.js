@@ -34,6 +34,10 @@ hiders.set("*.blogspot.com", () => {
 hiders.set("blogs.scientificamerican.com", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
 })
+hiders.set("*.cnn.com", () => {
+    hide(document.querySelector(".optanon-alert-box-wrapper"))
+    hide(document.querySelector("#optanon"))
+})
 hiders.set("commande.dominos.fr", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
 })
@@ -86,6 +90,9 @@ hiders.set("nationalpost.com", () => {
 })
 hiders.set("phys.org", () => {
     hide(document.querySelector("#js-popup-cookies"))
+})
+hiders.set("*.shadow.tech", () => {
+    hide(document.querySelector("footer + div"))
 })
 hiders.set("slashdot.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
@@ -214,6 +221,9 @@ hiders.set("www.gamelove.com", () => {
 hiders.set("www.gibert.com", () => {
     hide(document.querySelector("#notice-cookie-block"))
 })
+hiders.set("www.gogalaxy.com", () => {
+    hide(document.querySelector("#cookies"))
+})
 hiders.set("www.google.com", () => {
     hide(document.querySelector("#lb"))
     document.querySelector("html").style.overflow = 'scroll'
@@ -268,6 +278,9 @@ hiders.set("www.newsweek.com", () => {
 hiders.set("www.nissan.fr", () => {
     hide(document.querySelector(".cookies-container"))
 })
+hiders.set("www.numerama.com", () => {
+    hide(document.querySelector("body > iframe + div "))
+})
 hiders.set("www.nytimes.com", () => {
     hide(document.querySelector(".shown.expanded"))
 })
@@ -276,6 +289,9 @@ hiders.set("www.paris.fr", () => {
 })
 hiders.set("www.pcgamer.com", () => {
     hide(document.querySelector("#cmp-container-id"))
+})
+hiders.set("www.phoronix.com", () => {
+    hideQuantcast()
 })
 hiders.set("www.pinterest.com", () => {
     hide(document.querySelector(".outerCookieBar"))
