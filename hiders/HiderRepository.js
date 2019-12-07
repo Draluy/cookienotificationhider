@@ -122,6 +122,9 @@ hiders.set("uk.reuters.com", () => {
 hiders.set("wordpress.com", () => {
     hide(document.querySelector(".custom-cookie-banner"))
 })
+hiders.set("wccftech.com", () => {
+    hideQuantcast()
+})
 hiders.set("vimeo.com", () => {
     hide(document.querySelector(".gdpr_banner"))
 })
@@ -160,6 +163,9 @@ hiders.set("www.biography.com", () => {
 })
 hiders.set("www.blackwake.com", () => {
     hide(document.querySelector("#kb-container"))
+})
+hiders.set("www.bleepingcomputer.com", () => {
+    hideQuantcast()
 })
 hiders.set("www.bloomberg.com", () => {
     hide(document.querySelector("#paywall-banner"))
@@ -230,6 +236,9 @@ hiders.set("www.google.com", () => {
 })
 hiders.set("www.google.fr", () => {
     hide(document.querySelector(".fbar"))
+})
+hiders.set("www.independent.co.uk", () => {
+    hideQuantcast()
 })
 hiders.set("www.infoconcert.com", () => {
     hide(document.querySelector("#notification-cookies"))
