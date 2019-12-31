@@ -10,6 +10,7 @@ let setIntervalX = function (callback, delay, repetitions) {
 
 let hidePeskyMessage = function () {
     let hostname = window.location.hostname
+
     if (hideCookieMessage === null) {
         //nothing to do: we searched the database and failed to find a match
     } else if (hideCookieMessage !== undefined) {

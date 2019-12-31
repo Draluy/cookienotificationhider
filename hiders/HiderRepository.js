@@ -57,6 +57,9 @@ hiders.set("fr.mappy.com", () => {
 hiders.set("freesound.org", () => {
     hide(document.querySelector("#cookie-bar"))
 })
+hiders.set("izismile.com", () => {
+    hideQuantcast()
+})
 hiders.set("krita.org", () => {
     hide(document.querySelector("#cookies-message"))
 })
@@ -93,6 +96,10 @@ hiders.set("phys.org", () => {
 })
 hiders.set("*.shadow.tech", () => {
     hide(document.querySelector("footer + div"))
+    hide(document.querySelector("footer + footer + div"))
+})
+hiders.set("shadow.tech", () => {
+    hide(document.querySelector("#__next > div + div"))
 })
 hiders.set("slashdot.org", () => {
     hide(document.querySelector(".qc-cmp-showing"))
@@ -133,6 +140,9 @@ hiders.set("uk.reuters.com", () => {
 })
 hiders.set("wiki.dd-wrt.com", () => {
     hide(document.querySelector(".cookieinfo"))
+})
+hiders.set("www.20min.ch", () => {
+    hide(document.querySelector(".as-oil-content-overlay"))
 })
 hiders.set("www.6play.fr", () => {
     hide(document.querySelector(".banner--gdpr"))
@@ -218,6 +228,10 @@ hiders.set("www.foozine.com", () => {
 hiders.set("www.francetvinfo.fr", () => {
     hide(document.querySelector("#cookie-cnil-box"))
 })
+hiders.set("www.funradio.fr", () => {
+    hide(document.querySelector("#didomi-consent-popup"))
+    document.querySelector("body").classList.remove("didomi-consent-popup-open")
+})
 hiders.set("www.gamekult.com", () => {
     hideQuantcast()
 })
@@ -246,6 +260,9 @@ hiders.set("www.infoconcert.com", () => {
 hiders.set("www.instagram.com", () => {
     hide(document.querySelector(".lOPC8"))
 })
+hiders.set("www.inverse.com", () => {
+    hide(document.querySelector(".cc-window.cc-banner.cc-type-opt-out.cc-bottom "))
+})
 hiders.set("izismile.com", () => {
     hideQuantcast()
 })
@@ -260,6 +277,9 @@ hiders.set("www.leetchi.com", () => {
 })
 hiders.set("www.lemonde.fr", () => {
     hide(document.querySelector("#cookie-banner"))
+})
+hiders.set("www.leprogres.fr", () => {
+    hideQuantcast()
 })
 hiders.set("www.leroymerlin.fr", () => {
     hide(document.querySelector("#privacy_bandeau"))
