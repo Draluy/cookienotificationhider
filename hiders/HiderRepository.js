@@ -91,8 +91,14 @@ hiders.set("mydhl.express.dhl", () => {
 hiders.set("nationalpost.com", () => {
     hide(document.querySelector(".fc-dialog-container"))
 })
+hiders.set("obo.ch", () => {
+    hide(document.querySelector(".cookie-info"))
+})
 hiders.set("phys.org", () => {
     hide(document.querySelector("#js-popup-cookies"))
+})
+hiders.set("robertsspaceindustries.com", () => {
+    hide(document.querySelector("#notification-bar-root"))
 })
 hiders.set("*.shadow.tech", () => {
     hide(document.querySelector("footer + div"))
@@ -102,8 +108,9 @@ hiders.set("shadow.tech", () => {
     hide(document.querySelector("#__next > div + div"))
 })
 hiders.set("slashdot.org", () => {
-    hide(document.querySelector(".qc-cmp-showing"))
-    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+    hide(document.querySelector("#cmpbox2"))
+    hide(document.querySelector("#cmpbox"))
+    document.querySelector("body").style = ""
 })
 hiders.set("stackexchange.com", () => {
     hide(document.querySelector("#js-gdpr-consent-banner"))
@@ -186,6 +193,11 @@ hiders.set("www.bmw.fr", () => {
 hiders.set("www.buzzfeed.com", () => {
     hideQuantcast()
 })
+hiders.set("www.castorama.fr", () => {
+    hide(document.querySelector("#js-modal"))
+    hide(document.querySelector("#js-modal-overlay"))
+    document.querySelector("body").style = ""
+})
 hiders.set("www.cbsnews.com", () => {
     hide(document.querySelector("#_evidon_banner"))
 })
@@ -199,7 +211,8 @@ hiders.set("www.cnbc.com", () => {
     hide(document.querySelector("#_evh-ric"))
 })
 hiders.set("www.cnet.com", () => {
-    hide(document.querySelector("#_evidon_banner"))
+    hide(document.querySelector("#onetrust-consent-sdk"))
+    hide(document.querySelector("#onetrust-banner-sdk"))
 })
 hiders.set("www.dailymail.co.uk", () => {
     hide(document.querySelector(".mol-ads-cmp"))
@@ -231,6 +244,9 @@ hiders.set("www.francetvinfo.fr", () => {
 hiders.set("www.funradio.fr", () => {
     hide(document.querySelector("#didomi-consent-popup"))
     document.querySelector("body").classList.remove("didomi-consent-popup-open")
+})
+hiders.set("www.futura-sciences.com", () => {
+    hide(document.querySelector("#sd-cmp"))
 })
 hiders.set("www.gamekult.com", () => {
     hideQuantcast()
@@ -278,6 +294,10 @@ hiders.set("www.leetchi.com", () => {
 hiders.set("www.lemonde.fr", () => {
     hide(document.querySelector("#cookie-banner"))
 })
+hiders.set("www.leparisien.fr", () => {
+    hide(document.querySelector("#didomi-host"))
+    document.querySelector("body").classList.remove("didomi-popup-open")
+})
 hiders.set("www.leprogres.fr", () => {
     hideQuantcast()
 })
@@ -312,6 +332,9 @@ hiders.set("www.numerama.com", () => {
 })
 hiders.set("www.nytimes.com", () => {
     hide(document.querySelector(".shown.expanded"))
+})
+hiders.set("www.ouest-france.fr", () => {
+    hide(document.querySelector("#scmp-popin"))
 })
 hiders.set("www.paris.fr", () => {
     hide(document.querySelector("#notice_cnil"))
@@ -353,6 +376,9 @@ hiders.set("www.r-m.de", () => {
 })
 hiders.set("www.siemens-home.bsh-group.com", () => {
     hide(document.querySelector(".o-cookielaw"))
+})
+hiders.set("www.schwalbe.com", () => {
+    hide(document.querySelector(".cookiebar"))
 })
 hiders.set("www.sudinfo.be", () => {
     hide(document.querySelector("#cookiesdirective"))
