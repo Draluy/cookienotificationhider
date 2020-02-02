@@ -49,7 +49,10 @@ hiders.set("donnons.org", () => {
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("dd-wrt.com", () => {
-    hide(document.querySelector(".cookie-notice-container"))
+  hide(document.querySelector(".cookie-notice-container"))
+})
+hiders.set("edition.cnn.com", () => {
+    hide(document.querySelector("#onetrust-consent-sdk"))
 })
 hiders.set("fr.mappy.com", () => {
     hide(document.querySelector("#IndexView-first-visit"))
@@ -80,6 +83,11 @@ hiders.set("muli-cycles.de", () => {
 })
 hiders.set("newrepublic.com", () => {
     hide(document.querySelector(".site-popup.consent"))
+})
+hiders.set("news.sky.com", () => {
+    hide(document.querySelector("div[class^=\"sp_veil\"]"))
+    hide(document.querySelector("div[id^=\"sp_message\"]"))
+    document.querySelector("html").classList.remove("sp-message-open")
 })
 hiders.set("motherboard.vice.com", () => {
     hideAll(document.querySelectorAll("div#root ~ div"))
