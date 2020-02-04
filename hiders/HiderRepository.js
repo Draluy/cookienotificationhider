@@ -246,6 +246,10 @@ hiders.set("www.facebook.com", () => {
 hiders.set("www.foozine.com", () => {
     hideQuantcast()
 })
+hiders.set("www.forbes.com", () => {
+    hide(document.querySelector(".truste_overlay"))
+    hide(document.querySelector(".truste_box_overlay"))
+})
 hiders.set("www.francetvinfo.fr", () => {
     hide(document.querySelector("#cookie-cnil-box"))
 })
@@ -324,6 +328,10 @@ hiders.set("www.lycamobile.fr", () => {
 hiders.set("www.mercedes-benz.fr", () => {
     hide(document.querySelector("#cp-overlay"))
     hide(document.querySelector("#cp-dialog"))
+})
+hiders.set("www.metacritic.com", () => {
+    hide(document.querySelector("#onetrust-consent-sdk"))
+    hide(document.querySelector("#onetrust-banner-sdk"))
 })
 hiders.set("www.microsoft.com", () => {
     hide(document.querySelector("#uhfCookieAlert"))
