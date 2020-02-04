@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Cookies Notification Hider",
-  "version": "1.0.21",
+  "version": "1.0.22",
   "description": "Hides the pesky messages that ask you whether you'd like to accept cookies or not, without accepting them.",
   "icons": {
     "48": "icons/icon48.png"
