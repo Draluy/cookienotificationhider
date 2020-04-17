@@ -25,6 +25,9 @@ hiders.containsHostname = (hostname) => {
     return hideCookieMessage !== null
 }
 
+hiders.set("9gag.com", () => {
+    hide(document.querySelector("div[class^='app_gdpr']"))
+})
 hiders.set("bibliotheques.paris.fr", () => {
     hide(document.querySelector("#cnil_banner_container"))
 })
@@ -183,8 +186,7 @@ hiders.set("www.bing.com", () => {
     hide(document.querySelector("#thp_notf_div"))
 })
 hiders.set("www.biography.com", () => {
-    hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
-    document.querySelector("body").classList.remove("qc-cmp-ui-showing")
+    hideQuantcast()
 })
 hiders.set("www.blackwake.com", () => {
     hide(document.querySelector("#kb-container"))
@@ -265,6 +267,9 @@ hiders.set("www.gamekult.com", () => {
 })
 hiders.set("www.gamelove.com", () => {
     hide(document.querySelector("#sliding-popup"))
+})
+hiders.set("www.gamesradar.com", () => {
+    hide(document.querySelector("#cmp-container-id"))
 })
 hiders.set("www.gibert.com", () => {
     hide(document.querySelector("#notice-cookie-block"))
@@ -371,6 +376,7 @@ hiders.set("www.quechoisir.org", () => {
     hide(document.querySelector("#bannerCnil"))
 })
 hiders.set("www.reddit.com", () => {
+    hide(document.querySelector("#POPUP_CONTAINER"))
     let parentDivs = document.querySelectorAll("#SHORTCUT_FOCUSABLE_DIV > div");
     for (const [i, div] of parentDivs.entries()) {
         if (div.firstChild && div.firstChild.firstChild.tagName.toUpperCase() == "FORM") {
