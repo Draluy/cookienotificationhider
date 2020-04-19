@@ -25,6 +25,9 @@ hiders.containsHostname = (hostname) => {
     return hideCookieMessage !== null
 }
 
+hiders.set("www.6play.fr", () => {
+    hide(document.querySelector(".app__banner"))
+})
 hiders.set("9gag.com", () => {
     hide(document.querySelector("div[class^='app_gdpr']"))
 })
@@ -36,6 +39,9 @@ hiders.set("*.blogspot.com", () => {
 })
 hiders.set("blogs.scientificamerican.com", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
+})
+hiders.set("boardgamearena.com", () => {
+    hide(document.querySelector("div[aria-label='cookieconsent']"))
 })
 hiders.set("*.cnn.com", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
@@ -341,6 +347,9 @@ hiders.set("www.metacritic.com", () => {
 hiders.set("www.microsoft.com", () => {
     hide(document.querySelector("#uhfCookieAlert"))
 })
+hiders.set("www.netflix.com", () => {
+    hide(document.querySelector("#cookie-disclosure"))
+})
 hiders.set("www.newsweek.com", () => {
     hide(document.querySelector("#didomi-host"))
     document.querySelector("body").classList.remove("didomi-popup-open")
@@ -389,6 +398,9 @@ hiders.set("www.reddit.com", () => {
 })
 hiders.set("www.rollingstone.com", () => {
     hideQuantcast()
+})
+hiders.set("www.realvnc.com", () => {
+    hide(document.querySelector("#cookie-notice"))
 })
 hiders.set("www.reuters.com", () => {
     hide(document.querySelector("#_evidon_banner"))
@@ -442,7 +454,7 @@ hiders.set("www.tomshardware.com", () => {
     hide(document.querySelector(".prism-modal"))
 })
 hiders.set("www.twitch.tv", () => {
-    hide(document.querySelector(".gdpr-consent-banner"))
+    hide(document.querySelector(".consent-banner"))
 })
 hiders.set("www.rockpapershotgun.com", () => {
     hide(document.querySelector(".cookie-gdpr"))
