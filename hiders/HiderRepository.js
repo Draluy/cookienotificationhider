@@ -37,6 +37,9 @@ hiders.set("bibliotheques.paris.fr", () => {
 hiders.set("*.blogspot.com", () => {
     hide(document.querySelector("#cookieChoiceInfo"))
 })
+hiders.set("blog.playstation.com", () => {
+    hide(document.querySelector("#cookie-banner"))
+})
 hiders.set("blogs.scientificamerican.com", () => {
     hide(document.querySelector(".optanon-alert-box-wrapper"))
 })
@@ -242,6 +245,9 @@ hiders.set("www.dealabs.com", () => {
 hiders.set("www.dejbox.fr", () => {
     hide(document.querySelector(".cookie_banner"))
 })
+hiders.set("www.discogs.com", () => {
+    hide(document.querySelector("#onetrust-consent-sdk"))
+})
 hiders.set("www.esquire.com", () => {
     hide(document.querySelector("#_evidon-banner"))
 })
@@ -369,9 +375,12 @@ hiders.set("www.ouest-france.fr", () => {
 hiders.set("www.paris.fr", () => {
     hide(document.querySelector("#notice_cnil"))
 })
-hiders.set("www.pcgamer.com", () => {
-    hide(document.querySelector("#cmp-container-id"))
+hiders.set("www.peugeot.fr", () => {
+    hide(document.querySelector("#overlay-menu"))
+    hide(document.querySelector("#_psaihm_overlay"))
+    hide(document.querySelector("#_psaihm_main_div"))
 })
+
 hiders.set("www.phoronix.com", () => {
     hideQuantcast()
 })
@@ -380,6 +389,9 @@ hiders.set("www.pinterest.com", () => {
 })
 hiders.set("www.polygon.com", () => {
     hide(document.querySelector("#privacy-consent"))
+})
+hiders.set("www.popularmechanics.com", () => {
+    hide(document.querySelector("#onetrust-consent-sdk"))
 })
 hiders.set("www.quechoisir.org", () => {
     hide(document.querySelector("#bannerCnil"))
