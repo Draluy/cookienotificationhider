@@ -11,6 +11,9 @@ let hideQuantcast = () => {
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 }
 
+let hideOneTrust = () => {
+    hide(document.querySelector("#onetrust-consent-sdk"))
+}
 hiders.containsHostname = (hostname) => {
     hideCookieMessage = null
     for (let [matchingStr, value] of hiders) {

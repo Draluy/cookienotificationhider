@@ -19,6 +19,12 @@ let hidePeskyMessage = function () {
         return
     }
 
+    let onetrustMessage = document.querySelector("#onetrust-consent-sdk")
+    if (onetrustMessage) {
+        hideOneTrust()
+        return
+    }
+
     // No generic message, search in site-specific database
     if (hideCookieMessage === null) {
         //nothing to do: we searched the database and failed to find a match
