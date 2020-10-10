@@ -260,6 +260,9 @@ hiders.set("www.eurogamer.net", () => {
 hiders.set("www.facebook.com", () => {
     hide(document.querySelector(".fbPageBanner"))
 })
+hiders.set("www.fanatical.com", () => {
+    hide(document.querySelector(".cookie-collapsible"))
+})
 hiders.set("www.foozine.com", () => {
     hideQuantcast()
 })
@@ -288,6 +291,9 @@ hiders.set("www.gamesradar.com", () => {
 })
 hiders.set("www.gibert.com", () => {
     hide(document.querySelector("#notice-cookie-block"))
+})
+hiders.set("*.gitlab.com", () => {
+    hide(document.querySelector("#CybotCookiebotDialog"))
 })
 hiders.set("www.gogalaxy.com", () => {
     hide(document.querySelector("#cookies"))
