@@ -254,6 +254,10 @@ hiders.set("www.discogs.com", () => {
 hiders.set("www.esquire.com", () => {
     hide(document.querySelector("#_evidon-banner"))
 })
+hiders.set("www.etsy.com", () => {
+    hide(document.querySelector("#wt-modal-container"))
+    document.querySelector("body").classList.remove("body-no-scroll","wt-focus-visible")
+})
 hiders.set("www.eurogamer.net", () => {
     hide(document.querySelector(".bottom.cookie-bar.cookie-gdpr"))
 })
@@ -330,7 +334,9 @@ hiders.set("www.leetchi.com", () => {
     hide(document.querySelector("#AcceptCookiesBanner"))
 })
 hiders.set("www.lemonde.fr", () => {
-    hide(document.querySelector("#cookie-banner"))
+    hide(document.querySelector("#iubenda-cs-banner"))
+    hide(document.querySelector("#overlay"))
+    document.querySelector("body").style.overflow = "scroll"
 })
 hiders.set("www.leparisien.fr", () => {
     hide(document.querySelector("#didomi-host"))
@@ -343,7 +349,8 @@ hiders.set("www.leroymerlin.fr", () => {
     hide(document.querySelector("#privacy_bandeau"))
 })
 hiders.set("www.lesnumeriques.com", () => {
-    hideQuantcast()
+    hide(document.querySelector("#didomi-host"))
+    document.querySelector("body").classList.remove("didomi-popup-open")
 })
 hiders.set("www.linkedin.com", () => {
     hide(document.querySelector("#global-alert-queue"))
@@ -471,10 +478,13 @@ hiders.set("www.thenation.com", () => {
 hiders.set("www.theverge.com", () => {
     hide(document.querySelector("#privacy-consent"))
 })
+hiders.set("www.tiktok.com", () => {
+    hide(document.querySelector(".cookie-banner"))
+})
 hiders.set("www.tomshardware.com", () => {
     hide(document.querySelector(".prism-modal"))
 })
-hiders.set("www.twitch.tv", () => {
+hiders.set("*.twitch.tv", () => {
     hide(document.querySelector(".consent-banner"))
 })
 hiders.set("www.rockpapershotgun.com", () => {
