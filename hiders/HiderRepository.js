@@ -69,6 +69,9 @@ hiders.set("dd-wrt.com", () => {
 hiders.set("edition.cnn.com", () => {
     hide(document.querySelector("#onetrust-consent-sdk"))
 })
+hiders.set("en-us.sennheiser.com", () => {
+    hide(document.querySelector("#usercentrics-button"))
+})
 hiders.set("fr.mappy.com", () => {
     hide(document.querySelector("#IndexView-first-visit"))
 })
@@ -115,6 +118,9 @@ hiders.set("nationalpost.com", () => {
     hide(document.querySelector(".fc-dialog-container"))
 })
 hiders.set("obo.ch", () => {
+    hide(document.querySelector(".cookie-info"))
+})
+hiders.set("open.spotify.com", () => {
     hide(document.querySelector(".cookie-info"))
 })
 hiders.set("phys.org", () => {
@@ -215,6 +221,11 @@ hiders.set("www.bmw.fr", () => {
 hiders.set("www.buzzfeed.com", () => {
     hideQuantcast()
 })
+hiders.set("www.canyon.com", () => {
+    hide(document.querySelector(".cookiesModal"))
+    document.querySelector("body").classList.remove("page--noScroll")
+    document.querySelector("body").style = ""
+})
 hiders.set("www.castorama.fr", () => {
     hide(document.querySelector("#js-modal"))
     hide(document.querySelector("#js-modal-overlay"))
@@ -247,6 +258,10 @@ hiders.set("www.dealabs.com", () => {
 })
 hiders.set("www.dejbox.fr", () => {
     hide(document.querySelector(".cookie_banner"))
+})
+hiders.set("www.denofgeek.com", () => {
+    hide(document.querySelector("[id^=sp_message_container]"))
+    document.querySelector("html").classList.remove("sp-message-open")
 })
 hiders.set("www.discogs.com", () => {
     hide(document.querySelector("#onetrust-consent-sdk"))
@@ -309,8 +324,12 @@ hiders.set("www.google.com", () => {
 hiders.set("www.google.fr", () => {
     hide(document.querySelector(".fbar"))
 })
+hiders.set("www.heise.de", () => {
+    hide(document.querySelector("div[id^='sp_message_container']"))
+    document.querySelector("html").classList.remove('sp-message-open')
+})
 hiders.set("www.independent.co.uk", () => {
-    hideQuantcast()
+    hide(document.querySelector(".qc-cmp2-container"))
 })
 hiders.set("www.infoconcert.com", () => {
     hide(document.querySelector("#notification-cookies"))
@@ -384,6 +403,9 @@ hiders.set("www.numerama.com", () => {
 })
 hiders.set("www.nytimes.com", () => {
     hide(document.querySelector(".shown.expanded"))
+})
+hiders.set("www.omgubuntu.co.uk", () => {
+    hide(document.querySelector(".CookieWarning"))
 })
 hiders.set("www.ouest-france.fr", () => {
     hide(document.querySelector("#scmp-popin"))
@@ -507,6 +529,7 @@ hiders.set("www.whosampled.com", () => {
 })
 hiders.set("www.youtube.com", () => {
     hide(document.querySelector("#ticker"))
+    hide(document.querySelector("ytd-popup-container"))
     hide(document.querySelector("iron-overlay-backdrop"))
     hide(document.querySelector("#consent-bump"))
     // TODO: make this work: window.document.getElementById("movie_player").playVideo()
