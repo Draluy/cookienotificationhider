@@ -1,5 +1,6 @@
 let hide = (elt) => {
-    elt.style.cssText = 'display:none !important';
+    if(elt)
+        elt.style.cssText = 'display:none !important';
 }
 
 let hideAll = (elts) => {
@@ -19,7 +20,8 @@ hiders.containsHostname = (hostname) => {
     for (let [matchingStr, value] of hiders) {
         matchingStr = matchingStr.replace("*", "(?:.*?)")
         matchingStr = matchingStr.replace(/\./g, "\\\.")
-        if (RegExp(matchingStr).test(hostname)){
+
+        if (RegExp(matchingStr).test(hostname)) {
             hideCookieMessage = value
             break
         }
@@ -64,7 +66,7 @@ hiders.set("donnons.org", () => {
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
 })
 hiders.set("dd-wrt.com", () => {
-  hide(document.querySelector(".cookie-notice-container"))
+    hide(document.querySelector(".cookie-notice-container"))
 })
 hiders.set("edition.cnn.com", () => {
     hide(document.querySelector("#onetrust-consent-sdk"))
@@ -271,7 +273,7 @@ hiders.set("www.esquire.com", () => {
 })
 hiders.set("www.etsy.com", () => {
     hide(document.querySelector("#wt-modal-container"))
-    document.querySelector("body").classList.remove("body-no-scroll","wt-focus-visible")
+    document.querySelector("body").classList.remove("body-no-scroll", "wt-focus-visible")
 })
 hiders.set("www.eurogamer.net", () => {
     hide(document.querySelector(".bottom.cookie-bar.cookie-gdpr"))
@@ -317,12 +319,16 @@ hiders.set("*.gitlab.com", () => {
 hiders.set("www.gogalaxy.com", () => {
     hide(document.querySelector("#cookies"))
 })
-hiders.set("www.google.com", () => {
+hiders.set("www.google.*", () => {
+    console.log("1")
+    hide(document.querySelector("#consent-bump"))
+    console.log("2")
     hide(document.querySelector("#lb"))
+    console.log("3")
     document.querySelector("html").style.overflow = 'scroll'
-})
-hiders.set("www.google.fr", () => {
+    console.log("4")
     hide(document.querySelector(".fbar"))
+    console.log("5")
 })
 hiders.set("www.heise.de", () => {
     hide(document.querySelector("div[id^='sp_message_container']"))
