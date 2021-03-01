@@ -184,6 +184,9 @@ hiders.set("www.20min.ch", () => {
 })
 hiders.set("www.6play.fr", () => {
     hide(document.querySelector(".banner--gdpr"))
+    hide(document.querySelector("div[tabindex='1']"))
+    document.querySelector("body").style="";
+    document.querySelector("body").tabIndex=1;
 })
 hiders.set("www.atlasobscura.com", () => {
     hide(document.querySelector("#cookie-consent-modal"))
@@ -535,7 +538,6 @@ hiders.set("www.whosampled.com", () => {
 })
 hiders.set("www.youtube.com", () => {
     hide(document.querySelector("#ticker"))
-    hide(document.querySelector("ytd-popup-container"))
     hide(document.querySelector("iron-overlay-backdrop"))
     hide(document.querySelector("#consent-bump"))
     // TODO: make this work: window.document.getElementById("movie_player").playVideo()

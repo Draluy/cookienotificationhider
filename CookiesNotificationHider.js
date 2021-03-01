@@ -35,4 +35,4 @@ let hidePeskyMessage = function () {
     }
 }
 
-setIntervalX(hidePeskyMessage, 100, 20)
+setIntervalX(hidePeskyMessage, 100, 50)
