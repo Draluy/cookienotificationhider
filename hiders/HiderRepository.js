@@ -319,19 +319,19 @@ hiders.set("www.gibert.com", () => {
 hiders.set("*.gitlab.com", () => {
     hide(document.querySelector("#CybotCookiebotDialog"))
 })
+hiders.set("www.gmx.*", () => {
+    if (window.location.pathname.includes("consent")) {
+        window.location = "https://" + window.location.hostname
+    }
+})
 hiders.set("www.gogalaxy.com", () => {
     hide(document.querySelector("#cookies"))
 })
 hiders.set("www.google.*", () => {
-    console.log("1")
     hide(document.querySelector("#consent-bump"))
-    console.log("2")
     hide(document.querySelector("#lb"))
-    console.log("3")
     document.querySelector("html").style.overflow = 'scroll'
-    console.log("4")
     hide(document.querySelector(".fbar"))
-    console.log("5")
 })
 hiders.set("www.heise.de", () => {
     hide(document.querySelector("div[id^='sp_message_container']"))
@@ -364,7 +364,7 @@ hiders.set("www.leetchi.com", () => {
 hiders.set("www.lemonde.fr", () => {
     hide(document.querySelector("#iubenda-cs-banner"))
     hide(document.querySelector("#overlay"))
-    document.querySelector("body").style.overflow = "scroll"
+    document.querySelector("html").style.overflow = "inherit"
 })
 hiders.set("www.leparisien.fr", () => {
     hide(document.querySelector("#didomi-host"))
@@ -415,6 +415,9 @@ hiders.set("www.nytimes.com", () => {
 })
 hiders.set("www.omgubuntu.co.uk", () => {
     hide(document.querySelector(".CookieWarning"))
+})
+hiders.set("*.oracle.com", () => {
+    hideAll(document.querySelectorAll("div[id^='pop-']"))
 })
 hiders.set("www.ouest-france.fr", () => {
     hide(document.querySelector("#scmp-popin"))
