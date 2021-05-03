@@ -147,6 +147,7 @@ hiders.set("stackexchange.com", () => {
     hide(document.querySelector("#js-gdpr-consent-banner"))
 })
 hiders.set("stackoverflow.com", () => {
+    hide(document.querySelector(".js-consent-banner"))
     hide(document.querySelector("#js-gdpr-consent-banner"))
 })
 hiders.set("streamable.com", () => {
@@ -242,6 +243,9 @@ hiders.set("www.cbsnews.com", () => {
 hiders.set("www.challenges.fr", () => {
     hideQuantcast()
 })
+hiders.set("www.chess.com", () => {
+    hide(document.querySelector("#cookie-banner"))
+})
 hiders.set("www.citylab.com", () => {
     hideQuantcast()
 })
@@ -319,6 +323,10 @@ hiders.set("www.gibert.com", () => {
 hiders.set("*.gitlab.com", () => {
     hide(document.querySelector("#CybotCookiebotDialog"))
 })
+hiders.set("gizmodo.com", () => {
+    hide(document.querySelector("div[id^='sp_message_container']"))
+    document.querySelector("html").classList.remove('sp-message-open')
+})
 hiders.set("www.gmx.*", () => {
     if (window.location.pathname.includes("consent")) {
         window.location = "https://" + window.location.hostname
@@ -330,6 +338,8 @@ hiders.set("www.gogalaxy.com", () => {
 hiders.set("www.google.*", () => {
     hide(document.querySelector("#consent-bump"))
     hide(document.querySelector("#lb"))
+    hide(document.querySelector("#Sx9Kwc"))
+    hide(document.querySelector(".HTjtHe"))
     document.querySelector("html").style.overflow = 'scroll'
     hide(document.querySelector(".fbar"))
 })

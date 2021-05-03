@@ -10,19 +10,16 @@ let setIntervalX = function (callback, delay, repetitions) {
 
 let hidePeskyMessage = function () {
     let hostname = window.location.hostname
-
     //first, find generic cookie notification providers.
     // If found, remove the message and go no further
     let quantcastMessage = document.querySelector(".qc-cmp-ui-container.qc-cmp-showing")
     if (quantcastMessage) {
         hideQuantcast()
-        return
     }
 
     let onetrustMessage = document.querySelector("#onetrust-consent-sdk")
     if (onetrustMessage) {
         hideOneTrust()
-        return
     }
 
     // No generic message, search in site-specific database
