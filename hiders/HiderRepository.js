@@ -34,7 +34,7 @@ hiders.set("www.6play.fr", () => {
     hide(document.querySelector(".app__banner"))
 })
 hiders.set("9gag.com", () => {
-    hide(document.querySelector("div[class^='app_gdpr']"))
+    hide(document.querySelector(".qc-cmp2-container"))
 })
 hiders.set("bibliotheques.paris.fr", () => {
     hide(document.querySelector("#cnil_banner_container"))
