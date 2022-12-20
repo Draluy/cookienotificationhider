@@ -7,6 +7,10 @@ let hideAll = (elts) => {
     elts.forEach((elt => hide(elt)));
 }
 
+let remove = (elt) => {
+    if(elt) elt.remove();
+}
+
 let hideQuantcast = () => {
     hide(document.querySelector(".qc-cmp-ui-container.qc-cmp-showing"))
     document.querySelector("body").classList.remove("qc-cmp-ui-showing")
@@ -558,4 +562,7 @@ hiders.set("www.youtube.com", () => {
     hide(document.querySelector("iron-overlay-backdrop"))
     hide(document.querySelector("#consent-bump"))
     // TODO: make this work: window.document.getElementById("movie_player").playVideo()
+})
+hiders.set("www.czc.cz", () => {
+    remove(document.querySelector("#ccp-popup"))
 })
